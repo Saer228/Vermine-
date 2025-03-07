@@ -77,7 +77,7 @@
             </div>
         </div>
         <div class="resource" data-drag="true" data-drag-type="resource" data-drag-target="sanity">
-            <label class="resource-label resource-name {{#if (isDiceRollable system.attributes.sanity.value)}}rollable{{/if}}" data-resource="sanity" data-tooltip="{{localize 'CTHACK.SanityDesc'}}" data-tooltip-direction="UP">{{localize "CTHACK.Sanity"}}</label>
+            <label class="resource-label resource-name {{#if (isDiceRollable system.attributes.sanity.value)}}rollable{{/if}}" data-resource="sanity" data-tooltip="{{localize 'CTHACK.SanityDesc'}}" data-tooltip-direction="UP">{{localize "V2047.Stress"}}</label>
             <div class="resource-content">
                 <select class="resource-value {{#if hasLostSanity}}resource-value-lost{{/if}}"  name="system.attributes.sanity.value" data-type="String" data-tooltip="{{localize "TOOLTIPS.Max"}} {{system.attributes.sanity.max}}" {{{getStyleForDice system.attributes.sanity.value}}} {{disabled uneditable}}>
                   {{selectOptions diceValues selected=system.attributes.sanity.value}}
@@ -94,7 +94,7 @@
         
         {{#if (isEnabled "Wealth")}}  
           <div class="resource" data-drag="true" data-drag-type="resource" data-drag-target="wealthDice">
-              <label for="wealthDice.value" class="resource-label wealth-name {{#if isWealthAsResource}}rollable{{/if}}" data-resource="wealthDice">{{localize "CTHACK.Wealth"}}</label>
+              <label for="wealthDice.value" class="resource-label wealth-name {{#if isWealthAsResource}}rollable{{/if}}" data-resource="wealthDice">{{localize "V2047.Interaction"}}</label>
               <div class="resource-content">
                   <select class="resource-value {{#if hasLostWealthDice}}resource-value-lost{{/if}}" name="system.attributes.wealthDice.value" data-type="String" {{#if isWealthAsResource}}data-tooltip="{{localize "TOOLTIPS.Max"}} {{system.attributes.wealthDice.max}}"{{/if}} {{{getStyleForDice system.attributes.wealthDice.value}}} {{disabled uneditable}}>
                       {{selectOptions diceValues selected=system.attributes.wealthDice.value}}
@@ -212,3 +212,22 @@
   </div>
 </form>
 
+
+<div class="resources">
+    <div class="resource">
+        <label class="resource-label">{{localize "V2047.Stress"}}</label>
+        <input type="number" name="system.attributes.stress.value" value="{{system.attributes.stress.value}}" min="0" max="3"/>
+    </div>
+    <div class="resource">
+        <label class="resource-label">{{localize "V2047.Eau"}}</label>
+        <input type="number" name="system.attributes.eau.value" value="{{system.attributes.eau.value}}" min="0"/>
+    </div>
+    <div class="resource">
+        <label class="resource-label">{{localize "V2047.Nourriture"}}</label>
+        <input type="number" name="system.attributes.nourriture.value" value="{{system.attributes.nourriture.value}}" min="0"/>
+    </div>
+    <div class="resource">
+        <label class="resource-label">{{localize "V2047.Munitions"}}</label>
+        <input type="number" name="system.attributes.munitions.value" value="{{system.attributes.munitions.value}}" min="0"/>
+    </div>
+</div>
