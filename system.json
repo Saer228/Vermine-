@@ -1,339 +1,219 @@
 {
-  "id": "cthack",
-  "title": "Cthulhu Hack",
-  "description": "The Cthulhu Hack system for FoundryVTT <p>Rejoignez la communauté Discord FR : <a href=\"https://discord.gg/pPSDNJk\">https://discord.gg/pPSDNJk</a></p>",
-  "authors": [
-    {
-      "name": "Kristov"
-    }
-  ],
-  "url": "#{URL}#",
-  "license": "LICENSE.txt",
-  "version": "#{VERSION}#",
-  "compatibility": {
-    "minimum": "12",
-    "verified": "12",
-    "maximum": "12"
-  },
-  "esmodules": ["cthack.mjs"],
-  "styles": ["css/cthack.css"],
-  "languages": [
-    {
-      "lang": "en",
-      "name": "English",
-      "path": "lang/en.json"
-    },
-    {
-      "lang": "fr",
-      "name": "French",
-      "path": "lang/fr.json"
-    }
-  ],
-  "documentTypes": {
-    "Actor": {
-      "character": { "htmlFields": ["description", "shortDescription", "biography", "notes", "equipment"] },
-      "opponent": { "htmlFields": ["description", "shortDescription"] }
-    },
-    "Item": {
-      "ability": { "htmlFields": ["description"] },
-      "item": { "htmlFields": ["description"] },
-      "weapon": { "htmlFields": ["description"] },
-      "magic": { "htmlFields": ["description"] },
-      "archetype": { "htmlFields": ["description"] },
-      "attack": { "htmlFields": ["description"] },
-      "opponentAbility": { "htmlFields": ["description"] },
-      "definition": { "htmlFields": ["description"] }
-    }
-  },
-  "packFolders": [
-    {
-      "name": "Cthulhu Hack",
-      "sorting": "m",
-      "color": "#59564c",
-      "folders": [
+    "id": "vermine2047",
+    "title": "Vermine 2047 - Hack de Cthulhu Hack",
+    "description": "Système de jeu de rôle post-apocalyptique pour Foundry VTT basé sur Cthulhu Hack et adapté à Vermine 2047.",
+    "authors": [
         {
-          "name": "FR",
-          "sorting": "m",
-          "color": "#59564c",
-          "packs": ["pregenerated", "archetypes", "abilities", "weapons", "opponents", "gametables", "outofaction", "temporaryinsanity", "shock", "macros"],
-          "folders": []
+            "name": "Adapté par [Ton Nom]"
+        }
+    ],
+    "url": "#{URL}#",
+    "license": "LICENSE.txt",
+    "version": "#{VERSION}#",
+    "compatibility": {
+        "minimum": "12",
+        "verified": "12",
+        "maximum": "12"
+    },
+    "esmodules": [
+        "cthack.mjs"
+    ],
+    "styles": [
+        "css/cthack.css"
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "lang/en.json"
         },
         {
-          "name": "EN",
-          "sorting": "m",
-          "color": "#59564c",
-          "packs": [
-            "pregenerated-en",
-            "archetypes-en",
-            "abilities-en",
-            "weapons-en",
-            "opponents-en",
-            "gametables-en",
-            "outofaction-en",
-            "temporaryinsanity-en",
-            "shock-en",
-            "macros-en"
-          ],
-          "folders": []
+            "lang": "fr",
+            "name": "French",
+            "path": "lang/fr.json"
         }
-      ]
+    ],
+    "documentTypes": {
+        "Actor": {
+            "character": {
+                "htmlFields": [
+                    "description",
+                    "shortDescription",
+                    "biography",
+                    "notes",
+                    "equipment"
+                ]
+            },
+            "opponent": {
+                "htmlFields": [
+                    "description",
+                    "shortDescription"
+                ]
+            }
+        },
+        "Item": {
+            "ability": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "item": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "weapon": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "magic": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "archetype": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "attack": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "opponentAbility": {
+                "htmlFields": [
+                    "description"
+                ]
+            },
+            "definition": {
+                "htmlFields": [
+                    "description"
+                ]
+            }
+        }
+    },
+    "packFolders": [
+        {
+            "name": "Cthulhu Hack",
+            "sorting": "m",
+            "color": "#59564c",
+            "folders": [
+                {
+                    "name": "FR",
+                    "sorting": "m",
+                    "color": "#59564c",
+                    "packs": [
+                        "pregenerated",
+                        "archetypes",
+                        "abilities",
+                        "weapons",
+                        "opponents",
+                        "gametables",
+                        "outofaction",
+                        "temporaryinsanity",
+                        "shock",
+                        "macros"
+                    ],
+                    "folders": []
+                },
+                {
+                    "name": "EN",
+                    "sorting": "m",
+                    "color": "#59564c",
+                    "packs": [
+                        "pregenerated-en",
+                        "archetypes-en",
+                        "abilities-en",
+                        "weapons-en",
+                        "opponents-en",
+                        "gametables-en",
+                        "outofaction-en",
+                        "temporaryinsanity-en",
+                        "shock-en",
+                        "macros-en"
+                    ],
+                    "folders": []
+                }
+            ]
+        }
+    ],
+    "packs": [
+        {
+            "name": "archetypes",
+            "label": "FR - Archétypes",
+            "system": "vermine2047",
+            "path": "packs/archetypes",
+            "type": "Item"
+        },
+        {
+            "name": "abilities",
+            "label": "FR - Compétences",
+            "system": "vermine2047",
+            "path": "packs/abilities",
+            "type": "Item"
+        },
+        {
+            "name": "weapons",
+            "label": "FR - Armes",
+            "system": "vermine2047",
+            "path": "packs/weapons",
+            "type": "Item"
+        },
+        {
+            "name": "opponents",
+            "label": "FR - Menaces",
+            "system": "vermine2047",
+            "path": "packs/opponents",
+            "type": "Actor"
+        },
+        {
+            "name": "resources",
+            "label": "FR - Ressources",
+            "system": "vermine2047",
+            "path": "packs/resources",
+            "type": "Item"
+        },
+        {
+            "name": "stress",
+            "label": "FR - Gestion du Stress",
+            "system": "vermine2047",
+            "path": "packs/stress",
+            "type": "Item"
+        },
+        {
+            "name": "macros",
+            "label": "FR - Macros",
+            "system": "vermine2047",
+            "path": "packs/macros",
+            "type": "Macro"
+        }
+    ],
+    "background": "systems/cthack/ui/accueil.webp",
+    "socket": true,
+    "manifest": "#{MANIFEST}#",
+    "download": "#{DOWNLOAD}#",
+    "grid": {
+        "distance": 5,
+        "units": "ft"
+    },
+    "primaryTokenAttribute": "hp",
+    "flags": {
+        "hotReload": {
+            "extensions": [
+                "css",
+                "html",
+                "hbs",
+                "json",
+                "mjs"
+            ],
+            "path": [
+                "css",
+                "templates",
+                "lang",
+                "module"
+            ]
+        }
     }
-  ],
-  "packs": [
-    {
-      "name": "pregenerated",
-      "label": "FR - Prétirés",
-      "system": "cthack",
-      "path": "packs/example-characters",
-      "type": "Actor",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "archetypes",
-      "label": "FR - Archetypes",
-      "system": "cthack",
-      "path": "packs/archetypes",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "abilities",
-      "label": "FR - Capacités spéciales",
-      "system": "cthack",
-      "path": "packs/special-abilities",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "weapons",
-      "label": "FR - Armes spéciales",
-      "system": "cthack",
-      "path": "packs/special-weapons",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "opponents",
-      "label": "FR - Adversaires",
-      "system": "cthack",
-      "path": "packs/opponents",
-      "type": "Actor",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "gametables",
-      "label": "FR - Tables aléatoires",
-      "system": "cthack",
-      "path": "packs/tables",
-      "type": "RollTable",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "outofaction",
-      "label": "FR - Hors Jeu",
-      "system": "cthack",
-      "path": "packs/out-of-action",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "temporaryinsanity",
-      "label": "FR - Folie passagère",
-      "system": "cthack",
-      "path": "packs/temporary-insanity",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "shock",
-      "label": "FR - Choc",
-      "system": "cthack",
-      "path": "packs/shock",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "macros",
-      "label": "FR - Macros",
-      "system": "cthack",
-      "path": "packs/macros",
-      "type": "Macro",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "archetypes-en",
-      "label": "EN - Archetypes",
-      "system": "cthack",
-      "path": "packs/archetypes-en",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "abilities-en",
-      "label": "EN - Special abilities",
-      "system": "cthack",
-      "path": "packs/special-abilities-en",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "weapons-en",
-      "label": "EN - Special weapons",
-      "system": "cthack",
-      "path": "packs/special-weapons-en",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "gametables-en",
-      "label": "EN - Tables",
-      "system": "cthack",
-      "path": "packs/tables-en",
-      "type": "RollTable",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "outofaction-en",
-      "label": "EN - Out of action",
-      "system": "cthack",
-      "path": "packs/out-of-action-en",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "temporaryinsanity-en",
-      "label": "EN - Temporary insanity",
-      "system": "cthack",
-      "path": "packs/temporary-insanity-en",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "pregenerated-en",
-      "label": "EN - Example characters",
-      "system": "cthack",
-      "path": "packs/example-characters-en",
-      "type": "Actor",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "shock-en",
-      "label": "EN - Shock",
-      "system": "cthack",
-      "path": "packs/shock-en",
-      "type": "Item",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "opponents-en",
-      "label": "EN - Opponents",
-      "system": "cthack",
-      "path": "packs/opponents-en",
-      "type": "Actor",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    },
-    {
-      "name": "macros-en",
-      "label": "EN - Macros",
-      "system": "cthack",
-      "path": "packs/macros-en",
-      "type": "Macro",
-      "ownership": {
-        "PLAYER": "NONE",
-        "TRUSTED": "OBSERVER",
-        "ASSISTANT": "OWNER"
-      }
-    }
-  ],
-  "background": "systems/cthack/ui/accueil.webp",
-  "socket": true,
-  "manifest": "#{MANIFEST}#",
-  "download": "#{DOWNLOAD}#",
-  "grid": {
-    "distance": 5,
-    "units": "ft"
-  },
-  "primaryTokenAttribute": "hp",
-  "flags": {
-    "hotReload": {
-      "extensions": ["css", "html", "hbs", "json", "mjs"],
-      "path": ["css", "templates", "lang", "module"]
-    }
-  }
 }
