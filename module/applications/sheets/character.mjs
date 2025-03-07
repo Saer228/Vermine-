@@ -681,3 +681,38 @@ export default class CtHackCharacterSheet extends ActorSheet {
 
   //#endregion
 }
+
+
+    /**
+     * Fonction pour gérer l'usure des compétences (dé évolutif)
+     */
+    async function rollSkillCheck(skill) {
+        let skillValue = this.actor.system.skills[skill].value;
+
+        // Vérifier que le dé est valide
+        let diceSize = `1d${skillValue}`;
+        let roll = new Roll(diceSize).roll();
+
+        // Afficher le résultat dans le chat
+        roll.toMessage({
+            speaker: ChatMessage.getSpeaker({ actor: this.actor }),
+            flavor: `Test de ${skill}`,
+        });
+
+        // Gérer l'usure si le résultat est un 1
+        if (roll.total === 1) {
+            let newDice = degradeDice(skillValue);
+            this.actor.update({ [`system.skills.${skill}.value`]: newDice });
+            ui.notifications.warn(`${skill} s'est détérioré (${skillValue} → ${newDice}) !`);
+        }
+    }
+
+    /**
+     * Fonction pour dégrader le dé (réduction progressive)
+     */
+    function degradeDice(dice) {
+        const diceOrder = [12, 10, 8, 6, 4];
+        let index = diceOrder.indexOf(dice);
+        return index < diceOrder.length - 1 ? diceOrder[index + 1] : 4; // Reste à d4 minimum
+    }
+    
