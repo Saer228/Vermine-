@@ -2257,3 +2257,46 @@ a.inline-roll {
   font-size: calc(var(--font-size-standard) * 1.2);
   text-shadow: 0 0 10px var(--color-shadow-primary);
 }
+
+
+    /* Appliquer une apparence rustique et survivaliste */
+    body {
+        background: #1e1e1c url('../ui/vermine_bg.jpg') no-repeat center center fixed;
+        background-size: cover;
+        color: #b5b5a1;
+    }
+
+    .sheet.actor {
+        background: rgba(30, 30, 28, 0.9);
+        border: 2px solid #5a5a47;
+        box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.5);
+    }
+
+    .character-sheet-header {
+        background: #3a3a32;
+        padding: 10px;
+        border-bottom: 2px solid #5a5a47;
+    }
+
+    .resource-label {
+        color: #d4af37;
+        font-weight: bold;
+    }
+
+    .sheet-tabs a {
+        background: #2e2e24;
+        color: #b5b5a1;
+        border: 1px solid #5a5a47;
+    }
+
+    .sheet-tabs a.active {
+        background: #5a5a47;
+        color: white;
+    }
+
+    .input, select {
+        background: #262621;
+        border: 1px solid #5a5a47;
+        color: #d4af37;
+    }
+    
